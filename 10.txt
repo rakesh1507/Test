@@ -1,0 +1,16 @@
+import time
+from selenium import webdriver
+
+driver=webdriver.Chrome()
+driver.get('https://www.w3schools.com/')
+
+logo=driver.find_element("id", "w3-logo")
+print(driver.title)
+
+if logo.is_displayed():
+    print("The Logo is visible.")
+else:
+    print("The Logo is not visible.")
+time.sleep(2)
+
+driver.quit()
