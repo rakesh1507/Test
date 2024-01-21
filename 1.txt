@@ -1,0 +1,94 @@
+package autotes;
+
+public class Account {
+
+	int number;
+	int principal;
+	float rate;
+	int term;
+	
+	public Account() {
+	    super();
+	}
+	
+	public Account(int number,int principal,float rate,int term)
+	{
+		this.number=number;
+		this.principal=principal;
+		this.rate=rate;
+		this.term=term;
+	}
+	
+	public double interest()
+	{
+		double inter;
+		inter=(this.principal*this.term*this.rate)/100;
+		principal+=inter;
+		return principal;
+	}
+	public static void main(String[] args) {
+		
+			Account account=new Account(123456789,10000,4.5f,56);
+		System.out.println("Total Principal= "+ account.interest());
+		
+	}
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+package autotes;
+
+public class Savings extends Account{
+
+	public Savings(int number,int principal,float rate,int term)
+	{
+		this.number=number;
+		this.principal=principal;
+		this.rate=rate;
+		this.term=term;
+	}
+	
+	public double interest()
+	{
+		double inte;
+		inte=(principal*rate*term)/100;
+		return inte;
+	}
+	public static void main(String[] args) {
+		
+		Savings savings=new Savings(123456790,10000,4.5f,1);
+		
+		System.out.println("Total Principal= "+ savings.interest());
+	}
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+package autotes;
+
+public class Current extends Account{
+
+	public Current(int number,int principal,float rate,int term)
+	{
+		this.number=number;
+		this.principal=principal;
+		this.rate=rate;
+		this.term=term;
+	}
+	
+	public double interest()
+	{
+		double inte;
+		inte=(principal*rate*term)/100;
+		return inte;
+		
+	}
+	public static void main(String[] args) {
+		
+		Current current=new Current(123456791,10000,4.5f,1);
+		
+		System.out.println("Total Principal= "+ current.interest());
+	}
+}
+
