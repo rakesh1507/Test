@@ -1,0 +1,25 @@
+class Student:
+    def __init__(self,name,grade,age):
+        self.name=name
+        self.grade=grade
+        self.age=age
+
+    def display(self):
+        return "{} {} {}".format(self.name,self.grade,self.age)
+
+
+class School(Student):
+    def __init__(self,name,grade,age):
+        self.name=name
+        self.grade=grade
+        self.age=age
+    def SchoolStudentDisplay(self):
+        return "{} {} {}".format(self.name,self.grade,self.age)
+
+student1 = Student("Rajesh",9,14)
+
+print(student1.display())
+
+student2=School("Ramesh",8,13)
+
+print(student2.SchoolStudentDisplay())
